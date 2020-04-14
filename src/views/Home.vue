@@ -92,7 +92,7 @@
         <h4><strong class="field-title">infections by {{time}}</strong>:
         {{estimate.impact.infectionsByRequestedTime}}</h4>
         <h4><strong class="field-title">Severe Cases by {{time}}</strong>:
-        ${{estimate.impact.severeCasesByRequestedTime}}</h4>
+        {{estimate.impact.severeCasesByRequestedTime}}</h4>
         <h4><strong class="field-title">Cases for ICU</strong>:
         {{estimate.impact.casesForICUByRequestedTime}}</h4>
         <h4><strong class="field-title">Cases for Ventilators</strong>:
@@ -108,7 +108,7 @@
         <h4><strong class="field-title">infections by {{time}}</strong>:
         {{estimate.severeImpact.infectionsByRequestedTime}}</h4>
         <h4><strong class="field-title">Severe Cases by {{time}}</strong>:
-        ${{estimate.severeImpact.severeCasesByRequestedTime}}</h4>
+        {{estimate.severeImpact.severeCasesByRequestedTime}}</h4>
         <h4><strong class="field-title">Cases for ICU</strong>:
         {{estimate.severeImpact.casesForICUByRequestedTime}}</h4>
         <h4><strong class="field-title">Cases for Ventilators</strong>:
