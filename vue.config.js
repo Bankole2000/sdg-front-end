@@ -1,4 +1,4 @@
 module.exports = {
-  // publicPath: '/sdg-front-end/'
-  publicPath: '/'
+  publicPath: '/sdg-front-end/'
+  // publicPath: '/'
   }
