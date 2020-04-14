@@ -75,6 +75,12 @@ select:focus {
   outline: var(--main-color) solid 1px;
 }
 
+.select-label {
+  display: block;
+  width: 80%;
+  margin: 2rem auto 0 auto;
+}
+
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);

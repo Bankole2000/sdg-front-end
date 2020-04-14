@@ -34,7 +34,7 @@
       <span class="input-content-name">Total Hospital Beds</span>
     </label>
   </div>
-  <label for="selectPeriodType"></label>
+  <label for="selectPeriodType" class="select-label">Select Period Type:</label>
   <select name="periodType" id="selectPeriodType">
     <option value="days">days</option>
     <option value="weeks">weeks</option>
