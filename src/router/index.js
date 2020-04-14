@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Api from '../views/Api.vue';
+import Info from '../views/Info.vue';
 
 Vue.use(VueRouter);
 
@@ -9,6 +11,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/api',
+    name: 'Api',
+    component: Api,
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    component: Info,
   },
   {
     path: '/about',

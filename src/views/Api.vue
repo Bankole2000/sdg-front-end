@@ -1,23 +1,23 @@
 <template>
-  <div class="about">
-    <Title title="About this Program"/>
+  <div class="Api">
+    <Title title="The Estimator API" />
     <main>
-
-    <h4>About Covid-19 Estimator, version history etc</h4>
-
+      <h4>About Covid-19 Estimator API, JSON vs xml etc</h4>
     </main>
   </div>
 </template>
+
 <script>
 import Title from '@/components/Title.vue';
 
 export default {
-  name: 'about',
+  name: 'Api',
   components: {
     Title,
   },
 };
 </script>
-<style lang="stylus" scoped>
+
+<style>
 
 </style>
