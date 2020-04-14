@@ -4,36 +4,38 @@
   <main>
 
   <div class="form-field">
-    <input type="text" name="population" data-population autocomplete="off"
+    <input type="text" name="population" id="population" data-population autocomplete="off"
     v-model="population" required>
     <label for="population" class="label-name">
       <span class="input-content-name">Population</span>
     </label>
   </div>
   <div class="form-field">
-  <input type="text" name="timeToElapse" data-time-to-elapse required autocomplete="off"
+  <input type="text" name="timeToElapse" id="timeToElapse"
+  data-time-to-elapse required autocomplete="off"
   v-model="timeToElapse">
     <label for="timeToElapse" class="label-name">
       <span class="input-content-name">Requested Projection Time</span>
     </label>
   </div>
   <div class="form-field">
-    <input type="text" name="reportedCases" data-reported-cases required autocomplete="off"
+    <input type="text" name="reportedCases" id="reportedCases"
+    data-reported-cases required autocomplete="off"
     v-model="reportedCases">
     <label for="reportedCases" class="label-name">
       <span class="input-content-name">Reported Cases</span>
     </label>
   </div>
   <div class="form-field">
-    <input type="text" name="totalHospitalBeds"
+    <input type="text" name="totalHospitalBeds" id="totalHospitalBeds"
     data-total-hospital-beds required autocomplete="off"
     v-model="totalHospitalBeds">
     <label for="totalHospitalBeds" class="label-name">
       <span class="input-content-name">Total Hospital Beds</span>
     </label>
   </div>
-
-  <select name="periodType" id="">
+  <label for="selectPeriodType"></label>
+  <select name="periodType" id="selectPeriodType">
     <option value="days">days</option>
     <option value="weeks">weeks</option>
     <option value="months">months</option>

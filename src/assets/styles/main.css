@@ -7,8 +7,8 @@
   --bg-tertiary: #191919;
   --bg-secondary: #141418;
   --transition-speed: 300ms;
-  --main-color: #e040fb;
-  --main-color-dark: #d024f6;
+  --main-color: wheat;
+  --main-color-dark: wheat;
 }
 
 * {
@@ -49,7 +49,7 @@ main {
   background: var(--main-color);
   border: none;
   border-radius: 3px;
-  color: white;
+  color: black;
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -58,7 +58,7 @@ main {
 
 .btn:focus {
   outline: 0;
-  border: 2px solid var(--main-color-dark);
+  
   background-color: var(--main-color-dark);
   /* filter: brightness(110%); */
 }
