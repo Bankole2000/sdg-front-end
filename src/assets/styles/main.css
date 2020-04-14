@@ -8,7 +8,7 @@
   --bg-secondary: #141418;
   --transition-speed: 300ms;
   --main-color: #6649b8;
-  --main-color-light: wheat;
+  --main-color-light:#F5DEB3;
   --btn-color: wheat;
   --btn-color-dark: wheat;
   --container-width : 90%;
@@ -46,12 +46,13 @@ main {
 
 .footer{
   display: flex;
-  width: 100%;
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
   height: 4rem;
   /* margin-top: calc(100vh - 2rem); */
   background-color: var(--bg-primary);
   color: var(--main-color-light);
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   /* position: fixed; */
   /* bottom: 0; */
@@ -62,8 +63,12 @@ main {
   padding: .5rem;
 }
 
-p {
-  margin-top: 1rem;
+p, h5, h4 {
+  margin: .5rem auto;
+}
+
+.field-title {
+  color: var(--main-color);
 }
 
 .main-header {
@@ -73,10 +78,10 @@ p {
 .btn {
   padding: 1rem 2rem;
   width: var(--container-width);
-  margin: .5rem auto;
+  margin: 1rem auto;
   display: block;
   background: var(--btn-color);
-  border: none;
+  border: 2px solid var(--btn-color);
   border-radius: 3px;
   color: black;
   font-size: 1.1rem;
@@ -240,7 +245,7 @@ select:focus {
 .divider {
   height: .2rem;
   margin: 1rem auto 0 auto;
-  width: var(--container-width);
+  width: 100%;
   background-color: var(--main-color);
 }
 .container {
@@ -396,4 +401,12 @@ nav ul li a a.nav-link img.svg {
 
 .form-field input:focus + .label-name::after, .form-field input:valid + .label-name::after {
   transform: translateX(0%);
+}
+
+.header-icon {
+  transition: all 0.3s ease;
+}
+.editing-icon {
+  transform: rotate(90deg);
+  filter: hue-rotate(90deg);
 }
