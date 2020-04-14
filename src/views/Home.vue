@@ -167,8 +167,9 @@ export default {
           this.estimate = res.data;
           this.showEstimate = true;
           this.loading = false;
-          this.time = this.data.timeToElapse === 1 ? `${this.data.timeToElapse} ${this.data.periodType}`
-            : `${this.data.timeToElapse} ${this.data.periodType.slice(0, -1)}`;
+          this.time = this.data.timeToElapse === 1
+            ? `${this.data.timeToElapse} ${this.data.periodType.slice(0, -1)}`
+            : `${this.data.timeToElapse} ${this.data.periodType}`;
         })
         .catch((err) => console.log(err));
     },
