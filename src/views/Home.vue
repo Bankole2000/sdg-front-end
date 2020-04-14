@@ -35,7 +35,7 @@
     </label>
   </div>
   <label for="selectPeriodType" class="select-label">Select Period Type:</label>
-  <select name="periodType" id="selectPeriodType">
+  <select name="periodType" id="selectPeriodType" data-period-type>
     <option value="days">days</option>
     <option value="weeks">weeks</option>
     <option value="months">months</option>
