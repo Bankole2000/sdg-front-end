@@ -229,7 +229,7 @@ select:focus {
   width: 2.5rem;
   min-width: 2rem;
   margin: 0 1.5rem;
-  filter: grayscale(0%) opacity(1);
+  filter: grayscale(0%) opacity(1) brightness(110%);
   transition: all var(--transition-speed) ease;
 }
 
