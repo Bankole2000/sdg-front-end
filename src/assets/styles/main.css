@@ -121,6 +121,12 @@ select:focus {
   margin: 2rem auto 0 auto;
 }
 
+.region-input {
+  padding: .2rem;
+  border: 1px solid var(--btn-color);
+  font-size: 1rem;
+}
+
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);

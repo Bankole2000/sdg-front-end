@@ -55,17 +55,19 @@
           cursor: pointer;" title="Edit Region Data"></h2>
         <h4><strong class="field-title">Name</strong>:
         <span v-if="!editing">{{data.region.name}}</span>
-        <input type="text" v-model="data.region.name" v-if="editing"> </h4>
+        <input class="region-input" type="text" v-model="data.region.name" v-if="editing"
+        size="15"></h4>
         <h4><strong class="field-title">Average Age</strong>:
         <span v-if="!editing">{{data.region.avgAge}}</span>
-        <input type="number" v-model="data.region.avgAge" v-if="editing"></h4>
+        <input class="region-input" type="text" v-model="data.region.avgAge" v-if="editing"
+        maxlength="5" size="5"></h4>
         <h4><strong class="field-title">Avg Daily Income</strong>:
         $<span v-if="!editing">{{data.region.avgDailyIncomeInUSD}}</span>
-        <input type="text" maxlength="5" size="5" v-model="data.region.avgDailyIncomeInUSD"
-        v-if="editing"></h4>
+        <input class="region-input" type="text" maxlength="5" size="5"
+        v-model="data.region.avgDailyIncomeInUSD" v-if="editing"></h4>
         <h4><strong class="field-title">Avg Income Population</strong>:
         <span v-if="!editing">{{data.region.avgDailyIncomePopulation}} %</span>
-        <input type="text" maxlength="2" size="3"
+        <input class="region-input" type="text" maxlength="2" size="3"
         v-model="data.region.avgDailyIncomePopulation"
         v-if="editing"></h4>
       </div>
@@ -89,9 +91,13 @@
         <h2 class="main-header">Impact</h2>
         <h4><strong class="field-title">Currently Infected</strong>:
         {{estimate.impact.currentlyInfected}}</h4>
-        <h4><strong class="field-title">infections by {{time}}</strong>:
+        <h4><strong class="field-title">infections by
+          {{data.timeToElapse}} {{data.timeToElapse == 1 ? data.periodType.slice(0, -1)
+        : data.periodType}}</strong>:
         {{estimate.impact.infectionsByRequestedTime}}</h4>
-        <h4><strong class="field-title">Severe Cases by {{time}}</strong>:
+        <h4><strong class="field-title">Severe Cases by
+          {{data.timeToElapse}} {{data.timeToElapse == 1 ? data.periodType.slice(0, -1)
+        : data.periodType}}</strong>:
         {{estimate.impact.severeCasesByRequestedTime}}</h4>
         <h4><strong class="field-title">Cases for ICU</strong>:
         {{estimate.impact.casesForICUByRequestedTime}}</h4>
@@ -105,9 +111,13 @@
         <h2 class="main-header">Severe Impact</h2>
         <h4><strong class="field-title">Currently Infected</strong>:
         {{estimate.severeImpact.currentlyInfected}}</h4>
-        <h4><strong class="field-title">infections by {{time}}</strong>:
+        <h4><strong class="field-title">infections by
+          {{data.timeToElapse}} {{data.timeToElapse == 1 ? data.periodType.slice(0, -1)
+        : data.periodType}}</strong>:
         {{estimate.severeImpact.infectionsByRequestedTime}}</h4>
-        <h4><strong class="field-title">Severe Cases by {{time}}</strong>:
+        <h4><strong class="field-title">Severe Cases by
+          {{data.timeToElapse}} {{data.timeToElapse == 1 ? data.periodType.slice(0, -1)
+        : data.periodType}}</strong>:
         {{estimate.severeImpact.severeCasesByRequestedTime}}</h4>
         <h4><strong class="field-title">Cases for ICU</strong>:
         {{estimate.severeImpact.casesForICUByRequestedTime}}</h4>
@@ -116,7 +126,10 @@
         <h4><strong class="field-title">Economic Costs</strong>:
         $ {{estimate.severeImpact.dollarsInFlight}}</h4>
       </div>
+      <div class="divider"></div>
     </div>
+
+     <DataChart v-if="showEstimate"/>
     </div>
 
   </main>
@@ -128,6 +141,7 @@
 import Title from '@/components/Title.vue';
 import Loader from '@/components/Loader.vue';
 import axios from 'axios';
+import DataChart from '@/components/Chart.vue';
 
 export default {
   name: 'Home',
@@ -155,6 +169,7 @@ export default {
   components: {
     Title,
     Loader,
+    DataChart,
   },
   methods: {
     clicked() {
